@@ -46,9 +46,13 @@ function renderToTextbox({ type, value }) {
     if (!(prevValue.type === OperatorType && type === OperatorType)) {
         stack.push(value);
         prevValue = { type, value };
+        textValue = stack.toString().split(',').join('');
         console.log('Prev Value :', prevValue);
         console.log('Stack', stack);
-        textBox.value = stack.toString().split(',').join('');
+        if(textValue.toString().length >=20){
+            textBox.style.fontSize = "20px";                
+        }
+        textBox.value = textValue;
     }
 }
 function reset() {
@@ -70,7 +74,11 @@ document.addEventListener('click', (e) => {
             renderToTextbox({ type: OperatorType, value: operator });
             break;
         case "equals":
-            result.value = calculate(textBox.value);
+            let _result = calculate(textBox.value);
+            if(_result.toString().length >=20){
+                result.style.fontSize = "20px";                
+            }
+            result.value = _result;
             break;
         case "ce":
             reset();
