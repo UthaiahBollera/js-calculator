@@ -36,7 +36,7 @@ function calculate(calculation) {
                     throw new Error("unknown operation: " + parts[i]);
             }
         }
-    }    
+    }
     return processed.reduce(function (result, elem) {
         return result + elem;
     });
@@ -50,6 +50,12 @@ function renderToTextbox({ type, value }) {
         console.log('Stack', stack);
         textBox.value = stack.toString().split(',').join('');
     }
+}
+function reset() {
+    stack = [];
+    prevValue = {};
+    result.value = "";
+    textBox.value = "";
 }
 
 
@@ -65,6 +71,9 @@ document.addEventListener('click', (e) => {
             break;
         case "equals":
             result.value = calculate(textBox.value);
+            break;
+        case "ce":
+            reset();
             break;
     }
 });
