@@ -13,7 +13,10 @@
   }
   .container{
    width:400px;
-   border: solid 1px black;
+    border: solid 1px black;
+    padding: 10px;
+    box-shadow: 10 px;
+    box-shadow: 0 10px 11px rgba(101,102,103,0.9);
   }
   .operator{
       border-left:solid 3px white;
