@@ -1,8 +1,7 @@
 .flex-container {
     display: flex;
     background-color: #f1f1f1; 
-    font-family: 'Open Sans', sans-serif;
-    border: solid 1px black;
+    font-family: 'Open Sans', sans-serif;    
   }
   
   .flex-container > div {  
@@ -14,6 +13,7 @@
   }
   .container{
    width:400px;
+   border: solid 1px black;
   }
   .operator{
       border-left:solid 3px white;
