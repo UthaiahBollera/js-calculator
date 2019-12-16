@@ -2,6 +2,7 @@
     display: flex;
     background-color: #f1f1f1; 
     font-family: 'Open Sans', sans-serif;
+    border: solid 1px black;
   }
   
   .flex-container > div {  
@@ -23,7 +24,8 @@
     border: none;
     width: 400px;
     outline: none;    
-    text-align: right;    
+    text-align: right;
+    width: 390px;
   }
   .equals{
     background: #ffbd3a;
