@@ -1,7 +1,7 @@
 .flex-container {
     display: flex;
     background-color: #f1f1f1; 
-    font-family: 'Open Sans', sans-serif;    
+    font-family: monaco;    
   }
   
   .flex-container > div {  
